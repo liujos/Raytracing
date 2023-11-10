@@ -1,23 +1,23 @@
 #include "Ray.h"
 
-Ray::Ray(Vector3 &origin, Vector3 &direction)
+Ray::Ray(const Vec3 &ori, const Vec3 &dir)
 {
-    this->origin = origin;
-    this->direction = direction;
+    this->ori = ori;
+    this->dir = dir;
 }
 
-Vector3 Ray::origin()
+Vec3 Ray::origin() const
 {
-    return origin;
+    return ori;
 }
 
-Vector3 Ray::direction()
+Vec3 Ray::direction() const
 {
-    return direction;
+    return dir;
 }
 
-Vector3 Ray::location(f32 t)
+Vec3 Ray::location(f32 t) const
 {
-    return origin + t * direction;
+    return ori+ t * dir;
 }
 

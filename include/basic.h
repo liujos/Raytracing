@@ -1,4 +1,6 @@
 #pragma once
+#include <cmath>
+#include <iostream>
 #include <cstdint>
 
 typedef float f32;

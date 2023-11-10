@@ -1,13 +1,13 @@
-#include "Vector3.h"
+#include "Vec3.h"
 
 class Ray{
     private:
-        Vector3 origin;
-        Vector3 direction;
+        Vec3 ori {0, 0, 0};
+        Vec3 dir {0, 0, 0};
 
     public:
-        Ray(Vector3 &origin, Vector3 &direction);       
-        Vector3 origin();
-        Vector3 direction();
-        Vector3 location(f32 t);
+        Ray(const Vec3 &ori, const Vec3 &dir);       
+        Vec3 origin() const;
+        Vec3 direction() const;
+        Vec3 location(f32 t) const;
 };
